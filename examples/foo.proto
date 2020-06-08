@@ -10,12 +10,12 @@ message Bar {
   option (gen_bq_schema.table_name) = "bar_table";
 
   message Nested {
-    repeated int32 a = 1;
+    repeated int32 a = 1;  // Example description of Nested.a
   }
 
-  required int32 a = 1;
-  optional Nested b = 2;
-  repeated string c = 3;
+  required int32 a = 1;  // Example description of a
+  optional Nested b = 2;  // Example description of b
+  repeated string c = 3;  // Example description of c
 
   optional bool d = 4 [(gen_bq_schema.bigquery).ignore = true];
   optional uint64 e = 5 [
